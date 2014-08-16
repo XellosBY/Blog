@@ -1,0 +1,52 @@
+<h2>Регистрация</h2>
+<?=Form::open('auth')?>
+<table width='100px', cellpadding='5'>
+	<tr>
+		<td>
+		<?=Form::label('username','Логин')?>
+		</td>
+		<td>
+		<?=Form::input('username',$data['username'],array('size'=>80))?>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<?=Form::label('firstname','ФИО')?>
+		</td>
+		<td>
+		<?=Form::input('firstname',$data['firstname'],array('size'=>20))?>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<?=Form::label('email','Мыло')?>
+		</td>
+		<td>
+		<?=Form::input('email',$data['email'],array('size'=>20))?>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<?=Form::label('password','Пароль')?>
+		</td>
+		<td>
+		<?=Form::password('password',$data['password'],array('size'=>20))?>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<?=Form::label('password_confirm','Подтверждение пароля')?>
+		</td>
+		<td>
+		<?=Form::password('password_confirm',$data['password_confirm'],array('size'=>20))?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan='2' alight='left'>
+			<?=Form::submit('submit','Зарегитрироваццо')?>
+		</td>
+	</tr>
+</table>			
+<?=Debug::vars($errors)?>
+<?=Form::close();?>
+добавить регистрацию админов и права
